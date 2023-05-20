@@ -1,10 +1,14 @@
 #include "stdio.h"
 #include "string.h"
+
 int main(){
     int num;
-    char* number;
     printf("Enter a number: ");
-    scanf("%i", &num);
-    sprintf(number,"%i", num);
-    printf("%s", number[2]);
+    scanf("%d", &num);
+    char str[5];
+    sprintf(str, "%d", num); // integer to string
+    for(int i = (strlen(str) - 1); i >= 0; i--)
+    {
+        printf("%c", str[i]);
+    }
 }
